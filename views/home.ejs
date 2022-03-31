@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap"
-			rel="stylesheet"
-		/>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/home.css" />
-		<title>Blog POST</title>
-	</head>
-	<body>
-		<header>Blog Post</header>
-		<div class="mainArea">
-			<a class="createNewblog" href="blogs/new">Create New Blog</a>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Blog POST</title>
+  </head>
+  <body>
+    <header>Blog Post</header>
+    <div class="mainArea">
+      <a class="createNewblog" href="blogs/new">Create New Blog</a>
 
-			<div class="list">
-				<% data.forEach(element => { %>
-				<div class="container">
-					<div class="Title"><%= element.Title %></div>
-					<div class="Description">
-						<%= element.Description %>
-						<a href="blogs/<%=element.Title %>">Read More</a>
-					</div>
-					<div class="time"><%= element.created %></div>
-				</div>
-				<% }) %>
-			</div>
-		</div>
-	</body>
+      <div class="list">
+        <% data.forEach(element => { %>
+        <div class="container">
+          <div class="Title"><%= element.Title %></div>
+          <div class="Description">
+            <%= element.Description %>
+            <a href="blogs/<%=element.Title %>">Read More</a>
+          </div>
+          <div class="time"><%= element.created %></div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
 </html>

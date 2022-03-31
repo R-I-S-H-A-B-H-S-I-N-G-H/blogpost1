@@ -1,10 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
   background: lightcyan;
 }
 
@@ -32,27 +28,9 @@ header {
           justify-content: center;
 }
 
-.createNewblog {
-  text-decoration: none;
-  font-weight: 600;
-  background-color: lightgreen;
-  color: #093225;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  border-style: solid;
-  border-width: 0.15rem;
-  border-color: #14b07f;
-}
-
-.createNewblog:hover {
-  background: #14b07f;
-  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
-}
-
-.list {
-  margin-top: 1.5rem;
-  /* background: orangered; */
+form {
+  /* background-color: #14b07f; */
+  width: 70vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,22 +46,45 @@ header {
           justify-content: center;
 }
 
-.container {
-  width: 100%;
-  margin: 0.5rem;
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 70%;
+}
+
+.titleInput {
+  font-weight: bold;
+}
+
+.controlArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* background: #000; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.createNewblog {
+  border: none;
+  font-weight: 600;
+  background-color: #14b07f;
+  color: #093225;
   padding: 1rem;
-  border: 0.1rem solid black;
+  border-radius: 0.4rem;
+  margin: 0.5rem;
+}
+
+.cancel {
+  text-decoration: none;
+  font-weight: 600;
+  background-color: lightcoral;
+  color: white;
+  padding: 0.8rem;
   border-radius: 0.4rem;
 }
-
-.container:hover {
-  background: orange;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-}
-
-.Title {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=creatNew.css.map */
