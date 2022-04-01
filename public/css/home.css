@@ -58,7 +58,8 @@ header {
 
 .list {
   margin-top: 1.5rem;
-  /* background: orangered; */
+  padding: 0.5rem;
+  width: 70vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,6 +73,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
 }
 
 .container {
