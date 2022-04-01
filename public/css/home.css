@@ -42,12 +42,18 @@ header {
   border-style: solid;
   border-width: 0.15rem;
   border-color: #14b07f;
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
 }
 
 .createNewblog:hover {
   background: #14b07f;
-  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
 }
 
 .list {
@@ -74,12 +80,18 @@ header {
   padding: 1rem;
   border: 0.1rem solid black;
   border-radius: 0.4rem;
+  -webkit-transition: -webkit-transform 400ms ease-out;
+  transition: -webkit-transform 400ms ease-out;
+  transition: transform 400ms ease-out;
+  transition: transform 400ms ease-out, -webkit-transform 400ms ease-out;
 }
 
 .container:hover {
   background: orange;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
 }
 
 .Title {

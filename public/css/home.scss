@@ -31,9 +31,11 @@ header {
   border-style: solid;
   border-width: 0.15rem;
   border-color: #14b07f;
+  transition: transform 300ms ease-out;
   &:hover {
     background: #14b07f;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+    transform: translateY(-5px);
+    transition: 300ms ease-in;
   }
 }
 .list {
@@ -50,9 +52,13 @@ header {
   padding: 1rem;
   border: 0.1rem solid black;
   border-radius: 0.4rem;
+  transition: transform 400ms ease-out;
+
   &:hover {
     background: orange;
-    transition: 500ms ease-in-out;
+    // padding: 1.5rem;
+    transform: translateY(-5px);
+    transition: 400ms ease-in-out;
   }
 }
 .Title {
