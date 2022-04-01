@@ -20,14 +20,16 @@
 
       <div class="list">
         <% data.forEach(element => { %>
-        <div class="container">
-          <div class="Title"><%= element.Title %></div>
-          <div class="Description">
-            <%= element.Description %>
-            <a href="blogs/<%=element.Title %>">Read More</a>
+        <a class="containerCover" href="blogs/<%=element.Title %>">
+          <div class="container">
+            <div class="Title"><%= element.Title %></div>
+            <div class="Description">
+              <%= element.Description %>
+              <a href="blogs/<%=element.Title %>">....</a>
+            </div>
+            <div class="time"><%= element.created %></div>
           </div>
-          <div class="time"><%= element.created %></div>
-        </div>
+        </a>
         <% }) %>
       </div>
     </div>

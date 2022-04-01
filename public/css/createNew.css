@@ -4,15 +4,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-header {
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: bold;
-  text-align: center;
-}
-
 .mainArea {
-  /* background: blue; */
-  margin-top: 1rem;
+  height: 100vh;
+  background: lightblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,68 +17,100 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-form {
-  /* background-color: #14b07f; */
-  width: 70vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-label {
+.mainArea .navbar {
+  margin: 1rem;
+  padding: 1rem;
+  background: rgba(240, 128, 128, 0.664);
+  font-size: 2rem;
   font-weight: bold;
+  border: solid darkorange 0.15rem;
+  border-radius: 0.4rem;
 }
 
-input,
-textarea {
-  width: 70%;
+.mainArea .navbar:hover {
+  background: orange;
+  color: aliceblue;
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
-.titleInput {
-  font-weight: bold;
-}
-
-.controlArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* background: #000; */
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.createNewblog {
-  border: none;
-  font-weight: 600;
-  background-color: #14b07f;
-  color: #093225;
+.mainArea .controlArea {
+  background: rgba(255, 160, 122, 0.626);
   padding: 1rem;
   border-radius: 0.4rem;
-  margin: 0.5rem;
+  border: solid darkorange 0.15rem;
 }
 
-.cancel {
+.mainArea .controlArea a {
+  color: darkred;
+  font-weight: bold;
+  font-size: 1rem;
   text-decoration: none;
-  font-weight: 600;
-  background-color: lightcoral;
-  color: white;
-  padding: 0.8rem;
+  background: rgba(240, 128, 128, 0.682);
+  border: solid 0.15rem red;
   border-radius: 0.4rem;
+  padding: 0.5rem;
+}
+
+.mainArea .controlArea a:hover {
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  background: red;
+  color: aliceblue;
+}
+
+.mainArea .controlArea button {
+  color: green;
+  font-weight: bold;
+  font-size: 1rem;
+  border-style: none;
+  background: rgba(144, 238, 144, 0.564);
+  border: solid 0.15rem green;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+}
+
+.mainArea .controlArea button:hover {
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  background: green;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.mainArea .form {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: start;
+  margin: 1rem;
+}
+
+.mainArea .form label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mainArea .form input,
+.mainArea .form textarea {
+  border-style: none;
+  width: 80%;
+  border-radius: 0.2rem;
+  padding: 0.6em;
+  border-style: solid;
+  border-width: 0.15rem;
 }
 /*# sourceMappingURL=createNew.css.map */

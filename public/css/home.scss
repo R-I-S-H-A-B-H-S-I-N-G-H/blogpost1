@@ -21,6 +21,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .createNewblog {
   text-decoration: none;
   font-weight: 600;
@@ -66,4 +67,11 @@ header {
 .Title {
   font-size: 1.5rem;
   font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    cursor: pointer;
+  }
 }
