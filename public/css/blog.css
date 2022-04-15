@@ -1,13 +1,25 @@
 * {
   padding: 0;
   margin: 0;
-  background: lightcyan;
+  font-family: "Roboto", sans-serif;
+  color: #64668d;
 }
 
-.content {
-  background: #ee8d8d;
-  margin: 2rem;
-  padding: 1.5rem;
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.everything {
+  max-width: 80%;
+  min-width: 60%;
+}
+
+.everything .markdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,32 +27,52 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 0.6rem;
-  border-style: solid;
-  border-color: darksalmon;
-  border-width: 0.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.title {
-  margin: 1rem;
-  padding: 0.4rem;
+.everything .markdown h2,
+.everything .markdown h1,
+.everything .markdown h3 {
+  color: #25265e;
+  font-weight: 900;
+}
+
+.everything .markdown h1,
+.everything .markdown h2,
+.everything .markdown h3,
+.everything .markdown p,
+.everything .markdown pre {
+  margin-top: 1rem;
+}
+
+.everything pre {
+  width: 95%;
+}
+
+.everything code {
+  border-radius: 0.4rem;
+}
+
+.everything img {
+  max-width: 95%;
+}
+
+.everything header {
+  color: #0baeff;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+}
+
+.everything .title {
+  color: #25265e;
   font-weight: 600;
-  font-size: 3rem;
-  background: orange;
-  border-radius: 0.4rem;
-  border-style: solid;
-  border-color: darkorange;
-  border-width: 0.2rem;
-}
-
-.desc {
-  padding: 0.5rem;
-  background: lightpink;
-  width: 100%;
-  text-align: center;
-  border-radius: 0.4rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  margin: 2rem 2rem 1rem 0rem;
 }
 /*# sourceMappingURL=blog.css.map */

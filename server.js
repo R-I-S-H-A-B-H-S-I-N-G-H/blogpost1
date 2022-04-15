@@ -3,6 +3,7 @@ const blogs = require("./routes/blogs");
 const app = express();
 const database = require("./models/firebase");
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");

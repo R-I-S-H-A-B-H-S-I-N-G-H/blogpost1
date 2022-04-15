@@ -1,5 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const {marked} = require("marked");
+const createDomPurifyer = require("dompurify");
+const { JSDOM } = require("jsdom");
+const dompurify=createDomPurifyer(new JSDOM().window)
+
 router.use(express.static("public"));
 router.use(__dirname + "/public/css", express.static("public/css"));
 router.use(__dirname + "/public/js", express.static("public/js"));
@@ -15,10 +20,19 @@ router
     res.render("blogs/createNew");
   })
   .post("/new", async (req, res) => {
+    // here blogs are added to the firebase🔥
+    console.log(req.body);
+    // const markdown =
+    // dompurify.sanitize(marked(req.body.Markdown));
+    const markdown = dompurify.sanitize(marked.parse(req.body.Markdown));
+    
+    console.log("markdown: ",req.body.Markdown);
+    console.log(markdown);
     database
       .add({
         Title: req.body.Title,
         Description: req.body.Description,
+        Markdown:markdown
       })
       .then((res) => {
         console.log("id ", res.id);
@@ -44,9 +58,11 @@ router.get("/:title", async (req, res) => {
   var data = rawData[0];
   var title_Data = data["_fieldsProto"]["Title"];
   var des_Data = data["_fieldsProto"]["Description"];
+  var markdown_Data = data["_fieldsProto"]["Markdown"];
   res.render("blogs/blog", {
     Title: title_Data[title_Data["valueType"]],
     Description: des_Data[des_Data["valueType"]],
+    Markdown:markdown_Data[markdown_Data["valueType"]],
   });
 });
 module.exports = router;
