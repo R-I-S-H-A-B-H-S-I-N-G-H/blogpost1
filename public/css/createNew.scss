@@ -59,6 +59,13 @@
       padding: 0.5rem;
       border-radius: 0.4rem;
       border: solid rgb(102, 101, 100) 0.15rem;
+      .helpertext {
+        font-weight: 800;
+        color: rgb(102, 101, 100);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
     }
     .markdownArea {
       flex: 1;
