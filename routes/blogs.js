@@ -14,6 +14,10 @@ const database = require("../models/firebase");
 router.get("/", async (req, res) => {
   res.json("blogs page");
 });
+router.get("/markdown", (req,res) => { 
+  const markedText= marked.parse(req.body);
+  res.json(markedText);
+});
 
 router
   .get("/new", (req, res) => {

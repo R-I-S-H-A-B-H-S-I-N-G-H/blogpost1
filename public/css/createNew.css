@@ -19,6 +19,40 @@
           align-items: center;
 }
 
+.mainArea .form {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: start;
+  margin: 1rem;
+}
+
+.mainArea .form label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mainArea .form input,
+.mainArea .form textarea {
+  border-style: none;
+  width: 90%;
+  border-radius: 0.2rem;
+  padding: 0.6em;
+  border-style: solid;
+  border-width: 0.15rem;
+}
+
 .mainArea .navbar {
   margin: 1rem;
   padding: 1rem;
@@ -37,6 +71,35 @@
           transform: translateY(-5px);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
+}
+
+.mainArea .markdown {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainArea .markdown .markdownshow {
+  background-color: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: solid #666564 0.15rem;
+}
+
+.mainArea .markdown .markdownArea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mainArea .markdown .markdownArea textarea {
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: solid #666564 0.15rem;
 }
 
 .mainArea .controlArea {
@@ -81,36 +144,5 @@
   background: green;
   color: aliceblue;
   cursor: pointer;
-}
-
-.mainArea .form {
-  width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: start;
-  margin: 1rem;
-}
-
-.mainArea .form label {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.mainArea .form input,
-.mainArea .form textarea {
-  border-style: none;
-  width: 80%;
-  border-radius: 0.2rem;
-  padding: 0.6em;
-  border-style: solid;
-  border-width: 0.15rem;
 }
 /*# sourceMappingURL=createNew.css.map */
