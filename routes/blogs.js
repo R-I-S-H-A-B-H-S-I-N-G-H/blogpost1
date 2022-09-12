@@ -5,9 +5,6 @@ const createDomPurifyer = require("dompurify");
 const { JSDOM } = require("jsdom");
 const dompurify=createDomPurifyer(new JSDOM().window)
 
-router.use(express.static("public"));
-router.use(__dirname + "/public/css", express.static("public/css"));
-router.use(__dirname + "/public/js", express.static("public/js"));
 
 const database = require("../models/firebase");
 
@@ -21,7 +18,7 @@ router.get("/markdown", (req,res) => {
 
 router
   .get("/new", (req, res) => {
-    res.render("blogs/createNew");
+    res.json("blogs/createNew");
   })
   .post("/new", async (req, res) => {
     // here blogs are added to the firebase🔥
@@ -63,7 +60,7 @@ router.get("/:title", async (req, res) => {
   var title_Data = data["_fieldsProto"]["Title"];
   var des_Data = data["_fieldsProto"]["Description"];
   var markdown_Data = data["_fieldsProto"]["Markdown"];
-  res.render("blogs/blog", {
+  res.json({
     Title: title_Data[title_Data["valueType"]],
     Description: des_Data[des_Data["valueType"]],
     Markdown:markdown_Data[markdown_Data["valueType"]],
