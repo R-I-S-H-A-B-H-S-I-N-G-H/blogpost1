@@ -6,9 +6,6 @@ const database = require("./models/firebase");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.set("view engine", "ejs");
-app.use(express.static("public"));
-app.use(__dirname + "/public/css", express.static("public/css"));
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`listing at port ${port}`);
@@ -38,6 +35,7 @@ app.get("/", async (req, res) => {
   if (data[0] === undefined) {
     res.redirect("/");
   }
-  res.render("home", { data: data[0] });
+  // res.render("home", { data: data[0] });
+  res.json(data[0]);
 });
 app.use("/blogs", blogs);
