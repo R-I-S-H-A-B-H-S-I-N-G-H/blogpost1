@@ -1,9 +1,10 @@
 const express = require("express");
+var cors = require("cors");
 const blogs = require("./routes/blogs");
 const app = express();
 const database = require("./models/firebase");
 
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 const port = process.env.PORT || 3000;
